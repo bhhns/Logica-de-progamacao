@@ -1,38 +1,59 @@
 // fazendo um comando que ve as faltas e as notas 
 
 #include <stdio.h>
-int main(){
-    float a1, a2, mediafinal, prova3, novamediafinal;
+
+int main() {
+    float a1, a2, mediafinal, prova3;
     int faltas;
-    
-    printf("digite suas faltas(0 a 20):");
+
+    printf("Digite suas faltas (0 a 20): ");
     scanf("%d", &faltas);
 
-    if(faltas > 20){
-        printf("voce teve %d falta, por isso reprovou");
-    }else{ print("voce passou por ter menos falta, vamos ver suas notas!")
-        printf("digite a nota a1 (0 a 5)");
+    if (faltas > 20) {
+        printf("Voce teve %d faltas, por isso reprovou\n", faltas);
+    } else {
+        printf("Voce passou por ter menos faltas, vamos ver suas notas!\n");
+
+        printf("Digite a nota A1 (0 a 5): ");
         scanf("%f", &a1);
-        printf("digite a nota a2 (0 a 5)");
+
+        printf("Digite a nota A2 (0 a 5): ");
         scanf("%f", &a2);
+
         mediafinal = a1 + a2;
 
-        if (mediafinal >= 6){
-            printf("voce tirou a1 = %0.1f e a2 = %0.1f\n", a1, a2);
-            printf("sua media final = %0.1f(a1 + a2)\n", mediafinal);
-            printf("voce passou por sua media ser maior que 6\n");
-        } else{
-            printf("voce tirou a1 = %0.1f e a2 = %0.1f\n", a1, a2);
-            printf("sua media final = %0.1f(a1 + a2)\n", mediafinal);
-            printf("voce reprovou por sua media ser menor que 6\n");
+        if (mediafinal >= 6) {
+            printf("Voce tirou A1 = %.1f e A2 = %.1f\n", a1, a2);
+            printf("Sua media final = %.1f\n", mediafinal);
+            printf("Voce passou por sua media ser maior ou igual a 6\n");
+        } else {
+            printf("Voce tirou A1 = %.1f e A2 = %.1f\n", a1, a2);
+            printf("Sua media final foi de = %.1f ou seja, precisa fazer prova3\n", mediafinal);
+            
+
+            printf("Digite a nota da Prova 3 (0 a 5): ");
             scanf("%f", &prova3);
-           
-            if(a1 < a2){
-                novamediafinal = a1 + prova3;
-            } else{
-                novamediafinal = a2 + prova3;
-                
+
+            // Substitui a menor nota pela prova 3
+            if (a1 < a2) {
+                a1 = prova3;
+            } else {
+                a2 = prova3;
+            }
+
+            mediafinal = a1 + a2;
+
+            if (mediafinal >= 6) {
+                printf("Com a substituicao, A1 = %.1f e A2 = %.1f\n", a1, a2);
+                printf("Sua nova media final = %.1f\n", mediafinal);
+                printf("Voce passou por sua nova media ser maior ou igual a 6\n");
+            } else {
+                printf("Com a substituicao, A1 = %.1f e A2 = %.1f\n", a1, a2);
+                printf("Sua nova media final = %.1f\n", mediafinal);
+                printf("Voce reprovou mesmo apos a substituicao\n");
             }
         }
     }
+
+    return 0;
 }
