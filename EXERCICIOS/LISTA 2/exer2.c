@@ -101,8 +101,39 @@ int main(){
     return 0;
 }*/
 
-// 9 eleicao sindical 
+/* 9 eleicao sindical 
 #include <stdio.h>
 int main (){
-    
-}
+    int votoA, votoB, votoC, nulos, brancos, total;
+    printf("votos do candidato A:"); scanf("%d", &votoA);   
+    printf("votos do candidato B:"); scanf("%d", &votoB);
+    printf("votos do candidato C:"); scanf("%d", &votoC);
+    printf("votos nulos:"); scanf("%d", &nulos);
+    printf("votos em brancos:"); scanf("%d", &brancos);
+    total =  votoA + votoB + votoC + nulos + brancos;
+    printf("total eleitores: %d\n", total);
+    printf("votos validos: %.2f\n", (float)(votoA + votoB + votoC) / total * 100);
+    printf("candidato A: %.2f%%\n", (float)votoA*100 / total);
+    printf("candidato B: %.2f%%\n", (float)votoB*100 / total);
+    printf("candidato C: %.2f%%\n", (float)votoC*100 / total);
+    printf("votos nulos: %.2f%%\n", (float)nulos*100 / total);
+    printf("votos em brancos: %.2f%%\n", (float)brancos*100 / total);
+
+    return 0;
+}*/
+
+/* 10 operações basicas
+#include <stdio.h>
+int main (){
+    float num1, num2;
+    printf("digite dois numeros:");
+    scanf("%f %f", &num1, &num2);
+    printf("a soma dos numeros eh de: %.2f\n", num1 + num2);
+    printf("a subtracao dos numeros eh de: %.2f\n", num1 - num2);
+    printf("a multiplicacao dos numeros eh de: %.2f\n", num1 * num2);
+    if (num2 == 0)
+    printf("nao pode dividir por 0\n");
+    else
+    printf("a divisao dos numeros eh de: %.2f\n", num1 / num2);
+    return 0;
+}*/
