@@ -122,7 +122,7 @@ int main (){
     return 0;
 }*/
 
-/* 10 operações basicas
+/*  10 operações basicas
 #include <stdio.h>
 int main (){
     float num1, num2;
