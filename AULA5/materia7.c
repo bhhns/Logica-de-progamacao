@@ -7,13 +7,14 @@
 #include <stdio.h>
 int main(){
     int num, numeroescolhido;
-    num = 1;
     
     printf("digite o numero final:");
     scanf("%d", &numeroescolhido);
+    
     printf("digite o numero inicial:\n");
     scanf("%d", &num);
-    while(num < numeroescolhido){
+    
+    while(num < numeroescolhido){ // sem o = o laço para exatamente no numero final
         printf("numero %d \n", num);
         num = num + 1;
     }
