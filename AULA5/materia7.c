@@ -7,7 +7,7 @@
 #include <stdio.h>
 int main(){
     int num, numeroescolhido;
-    
+    num = 1;
     printf("digite o numero final:");
     scanf("%d", &numeroescolhido);
     
@@ -16,10 +16,7 @@ int main(){
     
     while(num < numeroescolhido){ // sem o = o laço para exatamente no numero final
         printf("numero %d \n", num);
-        num = num + 1;
+        num = num + 1; // num++ 
     }
     return 0;
 }
-
-//defina o valor inicial e valor final
-//mude a condição retirando o = do codigo e faça corretamente

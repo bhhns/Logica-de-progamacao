@@ -22,9 +22,12 @@ int main(){
 #include <stdio.h>
     int main(){
         float n1, n2, n3, n4, exame, media, novaMedia;
+       
         printf("digite o valor da nota de cada bimestre:");
         scanf("%f %f %f %f", &n1, &n2, &n3, &n4);
+       
         media = (n1 + n2 + n3 + n4) / 4;
+       
         if (media >= 7) {
             printf("Aprovado com media: %.2f\n", media);
         } else {
