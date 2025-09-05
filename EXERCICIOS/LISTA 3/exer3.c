@@ -44,4 +44,50 @@ int main(){
     } */
    
 
-// 3 
+// 3 bhaskara
+/*#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, c, delta, x1, x2, parte_real, parte_imaginaria;
+
+    printf("Digite os coeficientes a, b e c: ");
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    if (a == 0) {
+        printf("Nao e uma equacao do segundo grau.\n");
+    } else {
+        delta = (b * b) - (4 * a * c);
+
+        if (delta > 0) {
+            x1 = (-b + sqrt(delta)) / (2 * a);
+            x2 = (-b - sqrt(delta)) / (2 * a);
+            printf("Duas raizes reais: x1 = %.2lf e x2 = %.2lf\n", x1, x2);
+        }
+        else if (delta == 0) {
+            x1 = -b / (2 * a);
+            printf("Uma raiz real: x = %.2lf\n", x1);
+        }
+        else { 
+            parte_real = -b / (2 * a);
+            parte_imaginaria = sqrt(-delta) / (2 * a);
+            printf("Duas raizes complexas:\n");
+            printf("x1 = %.2lf + %.2lfi\n", parte_real, parte_imaginaria);
+            printf("x2 = %.2lf - %.2lfi\n", parte_real, parte_imaginaria);
+        }
+    }
+
+    return 0;
+}*/
+
+// 4 ordem crescente
+#include <stdio.h>
+int main(){
+    int a, b, c, temp;
+    printf("digite tres numeros inteiros:");
+    scanf("%d %d %d", &a, &b, &c);
+    if (a > b) { temp = a; a = b; b = temp; }
+    if (a > c) { temp = a; a = c; c = temp; }
+    if (b > c) { temp = b; b = c; c = temp; }
+    printf("Ordem crescente: %d %d %d\n", a, b, c);
+}
