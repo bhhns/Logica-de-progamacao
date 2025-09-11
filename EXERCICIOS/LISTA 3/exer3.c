@@ -81,7 +81,7 @@ int main() {
 }*/
 
 // 4 ordem crescente
-#include <stdio.h>
+/*#include <stdio.h>
 int main(){
     int a, b, c, temp;
     printf("digite tres numeros inteiros:");
@@ -90,4 +90,4 @@ int main(){
     if (a > c) { temp = a; a = c; c = temp; }
     if (b > c) { temp = b; b = c; c = temp; }
     printf("Ordem crescente: %d %d %d\n", a, b, c);
-}
+}*/
